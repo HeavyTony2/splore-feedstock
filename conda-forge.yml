@@ -4,4 +4,5 @@ github:
   user_or_org: simonboothroyd
 channels:
   targets:
-    - [simonboothroyd, main]
+  -
+    - SimonBoothroyd
