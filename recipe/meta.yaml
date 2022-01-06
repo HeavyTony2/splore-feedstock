@@ -6,9 +6,8 @@ package:
   version: {{ version }}
 
 source:
-  git_url: https://github.com/SimonBoothroyd/splore
-#  url: https://github.com/SimonBoothroyd/{{ name }}/archive/{{ version }}.tar.gz
-#  sha256: 63b8a47091957e99bec65aec9bffc73fb40267b954da71d1c9cb854cb2246caf
+  url: https://github.com/SimonBoothroyd/{{ name }}/archive/{{ version }}.tar.gz
+  sha256: b268554d0c939e69607802811e19c49581737f0c91874dd40dad7ea7c0061aba
 
 build:
   noarch: python
