@@ -1,0 +1,57 @@
+{% set name = "splore" %}
+{% set version = "0.0.1" %}
+
+package:
+  name: {{ name|lower }}
+  version: {{ version }}
+
+source:
+  git_url: https://github.com/SimonBoothroyd/splore
+#  url: https://github.com/SimonBoothroyd/{{ name }}/archive/{{ version }}.tar.gz
+#  sha256: 63b8a47091957e99bec65aec9bffc73fb40267b954da71d1c9cb854cb2246caf
+
+build:
+  noarch: python
+  number: 0
+  entry_points:
+    - splore = splore.cli:cli
+
+requirements:
+  build:
+    - python >=3.8
+    - pip
+    - nodejs =14
+  host:
+    - python >=3.8
+    - pip
+  run:
+    - python
+    - click
+    - rdkit
+    - rich
+    - pydantic
+    - fastapi
+    - uvicorn
+
+test:
+  imports:
+    - splore
+  commands:
+    - splore --help
+
+about:
+  home: https://github.com/SimonBoothroyd/splore
+  license: MIT
+  license_file:
+    - LICENSE
+    - LICENSE-3RD-PARTY
+  summary: A GUI for exploring sets of molecules
+  description: |
+    The splore framework aims to offer a simple graphical interface for scrolling through 
+    and exploring data sets of molecules.
+  doc_url: https://github.com/SimonBoothroyd/splore
+  dev_url: https://github.com/SimonBoothroyd/splore
+
+extra:
+  recipe-maintainers:
+    - simonboothroyd
