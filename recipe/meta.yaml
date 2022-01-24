@@ -1,5 +1,5 @@
 {% set name = "splore" %}
-{% set version = "0.0.4" %}
+{% set version = "0.0.5" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/SimonBoothroyd/{{ name }}/archive/{{ version }}.tar.gz
-  sha256: e71b1b8895e26dd371369e5b2e558504d2db6566e161446acab80b0e3b5098fd
+  sha256: 2619395e099628b48cc9211d50c13b98973a707ad6ecc214fe831a9b154a1e81
 
 build:
   noarch: python
